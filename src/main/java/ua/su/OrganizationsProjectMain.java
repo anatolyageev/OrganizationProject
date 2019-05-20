@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PetProjectMain {
+public class OrganizationsProjectMain {
   public static void main(final String[] args) {
-    SpringApplication.run(PetProjectMain.class, args);
+    SpringApplication.run(OrganizationsProjectMain.class, args);
   }
 }
