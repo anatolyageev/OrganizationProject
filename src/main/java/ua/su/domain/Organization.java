@@ -1,99 +1,97 @@
 package ua.su.domain;
-
-import java.util.ArrayList;
-
+import java.util.List;
 /**
  * Created by User on 5/17/2019.
  */
 public class Organization {
-    private String Name;
-    private String PhoneNumber;
-    private  String Adress;
-    private Region Reg;
-    private  String Country;
-    private  String City;
-    private  boolean Active;
-    private  String Specialization;
-    private  int OfficeNumber;
-    private ArrayList<Employees> employees = new ArrayList<>();
+    private String name;
+    private String phoneNumber;
+    private String adress;
+    private Region reg;
+    private String country;
+    private String city;
+    private Boolean cctive;
+    private String cpecialization;
+    private Integer cfficeNumber;
+    private List<Employees> employees ;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getAdress() {
-        return Adress;
+        return adress;
     }
 
     public void setAdress(String adress) {
-        Adress = adress;
+        this.adress = adress;
     }
 
     public Region getReg() {
-        return Reg;
+        return reg;
     }
 
     public void setReg(Region reg) {
-        Reg = reg;
+        this.reg = reg;
     }
 
     public String getCountry() {
-        return Country;
+        return country;
     }
 
     public void setCountry(String country) {
-        Country = country;
+        this.country = country;
     }
 
     public String getCity() {
-        return City;
+        return city;
     }
 
     public void setCity(String city) {
-        City = city;
+        this.city = city;
     }
 
-    public boolean isActive() {
-        return Active;
+    public Boolean getCctive() {
+        return cctive;
     }
 
-    public void setActive(boolean active) {
-        Active = active;
+    public void setCctive(Boolean cctive) {
+        this.cctive = cctive;
     }
 
-    public String getSpecialization() {
-        return Specialization;
+    public String getCpecialization() {
+        return cpecialization;
     }
 
-    public void setSpecialization(String specialization) {
-        Specialization = specialization;
+    public void setCpecialization(String cpecialization) {
+        this.cpecialization = cpecialization;
     }
 
-    public int getOfficeNumber() {
-        return OfficeNumber;
+    public Integer getCfficeNumber() {
+        return cfficeNumber;
     }
 
-    public void setOfficeNumber(int officeNumber) {
-        OfficeNumber = officeNumber;
+    public void setCfficeNumber(Integer cfficeNumber) {
+        this.cfficeNumber = cfficeNumber;
     }
 
-    public ArrayList<Employees> getEmployees() {
+    public List<Employees> getEmployees() {
         return employees;
     }
 
-    public void setEmployees(ArrayList<Employees> employees) {
+    public void setEmployees(List<Employees> employees) {
         this.employees = employees;
     }
 }

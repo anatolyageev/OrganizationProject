@@ -1,52 +1,51 @@
 package ua.su.domain;
-
 /**
  * Created by Anatolii Ageev on 5/17/2019.
  */
 public class Employees {
-    private String Name;
-    private String Surname;
-    private  String Position;
-    private boolean MaritalStatus;
-    private float YearsWorked;
+    private String name;
+    private String surname;
+    private String position;
+    private Boolean maritalStatus;
+    private Float yearsWorked;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getSurname() {
-        return Surname;
+        return surname;
     }
 
     public void setSurname(String surname) {
-        Surname = surname;
+        this.surname = surname;
     }
 
     public String getPosition() {
-        return Position;
+        return position;
     }
 
     public void setPosition(String position) {
-        Position = position;
+        this.position = position;
     }
 
-    public boolean getMaritalStatus() {
-        return MaritalStatus;
+    public Boolean getMaritalStatus() {
+        return maritalStatus;
     }
 
-    public void setMaritalStatus(boolean maritalStatus) {
-        MaritalStatus = maritalStatus;
+    public void setMaritalStatus(Boolean maritalStatus) {
+        this.maritalStatus = maritalStatus;
     }
 
-    public float getYearsWorked() {
-        return YearsWorked;
+    public Float getYearsWorked() {
+        return yearsWorked;
     }
 
-    public void setYearsWorked(float yearsWorked) {
-        YearsWorked = yearsWorked;
+    public void setYearsWorked(Float yearsWorked) {
+        this.yearsWorked = yearsWorked;
     }
 }
