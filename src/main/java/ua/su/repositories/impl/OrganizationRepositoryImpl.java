@@ -43,7 +43,7 @@ public class OrganizationRepositoryImpl implements OrganizationRepository {
                             new String[] { "id" });
             ps.setString(1, organization.getName());
             ps.setString(2, organization.getCountry());
-            ps.setBoolean(3, organization.getActive();
+            ps.setBoolean(3, organization.getActive());
             return ps;
         }, keyHolder);
         long catId = keyHolder.getKey().longValue();
