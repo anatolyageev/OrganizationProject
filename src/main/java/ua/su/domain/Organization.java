@@ -10,7 +10,7 @@ public class Organization {
     private Region reg;
     private String country;
     private String city;
-    private Boolean cctive;
+    private Boolean active;
     private String cpecialization;
     private Integer cfficeNumber;
     private List<Employees> employees ;
@@ -63,12 +63,12 @@ public class Organization {
         this.city = city;
     }
 
-    public Boolean getCctive() {
-        return cctive;
+    public Boolean getActive() {
+        return active;
     }
 
-    public void setCctive(Boolean cctive) {
-        this.cctive = cctive;
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     public String getCpecialization() {
