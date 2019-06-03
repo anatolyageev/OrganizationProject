@@ -11,24 +11,24 @@ package ua.su.config;
 @Configuration
 public class ApplicationConfiguration {
 
-    @Bean
-    public String mystring(){
-        return "my cool string";
-    }
+//    @Bean
+//    public String mystring(){
+//        return "my cool string";
+//    }
 
   @Bean
   public OrganizationRepository OrganizationRepository(JdbcTemplate jdbcTemplate) {
     return new OrganizationRepositoryImpl(jdbcTemplate);
   }
 
-  @Bean
-  public JdbcTemplate jdbcTemplate() {
-    return new JdbcTemplate();
-  }
+//  @Bean
+//  public JdbcTemplate jdbcTemplate() {
+//    return new JdbcTemplate();
+//  }
 
-  @Bean
-  public OrganizationRepository OrganizationRepository2(JdbcTemplate jdbcTemplate) {
-    return new OrganizationRepositoryImpl(jdbcTemplate);
-  }
+//  @Bean
+//  public OrganizationRepository OrganizationRepository2(JdbcTemplate jdbcTemplate) {
+//    return new OrganizationRepositoryImpl(jdbcTemplate);
+//  }
 
 }
