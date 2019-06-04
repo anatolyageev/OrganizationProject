@@ -15,6 +15,18 @@ public class Organization {
     private Integer officeNumber;
     private List<Employees> employees ;
 
+    public Organization(String name, String phoneNumber, String adress, Region reg, String country, String city, Boolean active, String cpecialization, Integer officeNumber) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.adress = adress;
+        this.reg = reg;
+        this.country = country;
+        this.city = city;
+        this.active = active;
+        this.cpecialization = cpecialization;
+        this.officeNumber = officeNumber;
+    }
+
     public String getName() {
         return name;
     }

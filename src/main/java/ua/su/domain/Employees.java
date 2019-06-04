@@ -7,6 +7,14 @@ public class Employees {
     private String surname;
     private String position;
     private Boolean maritalStatus;
+
+    public Employees(String name, String surname, String position, Boolean maritalStatus, Float yearsWorked) {
+        this.name = name;
+        this.surname = surname;
+        this.position = position;
+        this.maritalStatus = maritalStatus;
+        this.yearsWorked = yearsWorked;
+    }
     private Float yearsWorked;
 
     public String getName() {
