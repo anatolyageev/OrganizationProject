@@ -39,7 +39,8 @@ public class OrganizationRepositoryImpl implements OrganizationRepository {
     public Organization insert(Organization organization) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement ps = connection.prepareStatement("insert into organizations(name, phoneNumber, adress, reg, county, city , active, cpecialization, officeNumber) values (?,?,?,?,?,?,?,?,?,?)",
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO organizations(name, phoneNumber, adress, reg, county, city , active, cpecialization, officeNumber) " +
+                            "values (?,?,?,?,?,?,?,?,?,?)",
                             new String[] { "id" });
             ps.setString(1, organization.getName());
             ps.setString(2, organization.getPhoneNumber());
@@ -58,13 +59,12 @@ public class OrganizationRepositoryImpl implements OrganizationRepository {
 
     @Override
     public void delete(Long id) {
-        jdbcTemplate.update("DELETE FROM employees where organizations_id = ?", id);
-        jdbcTemplate.update("DELETE FROM organizations where id = ?", id);
+        jdbcTemplate.update("DELETE FROM organizations WHERE id = ?", id);
     }
 
     @Override
     public Organization update(Long id, Organization organization) {
-        jdbcTemplate.update("update organizations set name = ?, adress = ?, active = ? where id = ?",
+        jdbcTemplate.update("UPDATE organizations SET name = ?, adress = ?, active = ? WHERE id = ?",
                 organization.getName(), organization.getAdress(), organization.getActive(), id);
         return getOne(id);
     }
