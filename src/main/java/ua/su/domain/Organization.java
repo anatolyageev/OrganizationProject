@@ -10,9 +10,9 @@ public class Organization {
     private Region reg;
     private String country;
     private String city;
-    private Boolean cctive;
+    private Boolean active;
     private String cpecialization;
-    private Integer cfficeNumber;
+    private Integer officeNumber;
     private List<Employees> employees ;
 
     public String getName() {
@@ -63,12 +63,12 @@ public class Organization {
         this.city = city;
     }
 
-    public Boolean getCctive() {
-        return cctive;
+    public Boolean getActive() {
+        return active;
     }
 
-    public void setCctive(Boolean cctive) {
-        this.cctive = cctive;
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     public String getCpecialization() {
@@ -79,12 +79,12 @@ public class Organization {
         this.cpecialization = cpecialization;
     }
 
-    public Integer getCfficeNumber() {
-        return cfficeNumber;
+    public Integer getOfficeNumber() {
+        return officeNumber;
     }
 
-    public void setCfficeNumber(Integer cfficeNumber) {
-        this.cfficeNumber = cfficeNumber;
+    public void setOfficeNumber(Integer officeNumber) {
+        this.officeNumber = officeNumber;
     }
 
     public List<Employees> getEmployees() {

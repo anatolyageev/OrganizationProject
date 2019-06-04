@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class OrganizationsProjectMain {
-  public static void main(final String[] args) {
-    SpringApplication.run(OrganizationsProjectMain.class, args);
-  }
+    public static void main(final String[] args) {
+        SpringApplication.run(OrganizationsProjectMain.class, args);
+    }
 }
