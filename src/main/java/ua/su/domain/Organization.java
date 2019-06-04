@@ -12,7 +12,7 @@ public class Organization {
     private String city;
     private Boolean active;
     private String cpecialization;
-    private Integer OfficeNumber;
+    private Integer officeNumber;
     private List<Employees> employees ;
 
     public String getName() {
@@ -80,11 +80,11 @@ public class Organization {
     }
 
     public Integer getOfficeNumber() {
-        return OfficeNumber;
+        return officeNumber;
     }
 
     public void setOfficeNumber(Integer officeNumber) {
-        this.OfficeNumber = officeNumber;
+        this.officeNumber = officeNumber;
     }
 
     public List<Employees> getEmployees() {
