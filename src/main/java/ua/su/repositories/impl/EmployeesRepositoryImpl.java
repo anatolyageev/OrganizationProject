@@ -35,16 +35,17 @@ public class EmployeesRepositoryImpl implements RepositoryEmployees {
     }
 
     @Override
-    public Employees insert(Employees employees) {
+    public Employees insert(Long organizationId, Employees employees) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement ps = connection.prepareStatement("insert into employees(name, surname, position, maritalStatus, yearsWorked) values (?,?,?,?,?)",
-                    new String[] { "id" });
+            PreparedStatement ps = connection.prepareStatement("insert into employees(name, surname, position, maritalStatus, yearsWorked, organizationsId)" +
+                            " values (?,?,?,?,?,?)",new String[] { "id" });
             ps.setString(1, employees.getName());
             ps.setString(2, employees.getSurname());
             ps.setString(3, employees.getPosition());
             ps.setBoolean(4, employees.getMaritalStatus());
             ps.setFloat(5, employees.getYearsWorked());
+            ps.setLong(6,organizationId);
             return ps;
         }, keyHolder);
         long employeeId = keyHolder.getKey().longValue();
@@ -57,8 +58,13 @@ public class EmployeesRepositoryImpl implements RepositoryEmployees {
     }
 
     @Override
+    public void deleteByOrganizationId(Long id) {
+        jdbcTemplate.update("DELETE FROM employees where organizations_id = ?", id);
+    }
+
+    @Override
     public Employees update(Long id, Employees employees) {
-        jdbcTemplate.update("update organizations set name = ?, surname = ?, maritalStatus = ? where id = ?",
+        jdbcTemplate.update("update employees set name = ?, surname = ?, maritalStatus = ? where id = ?",
                 employees.getName(), employees.getSurname(), employees.getMaritalStatus(), id);
         return getOne(id);
     }

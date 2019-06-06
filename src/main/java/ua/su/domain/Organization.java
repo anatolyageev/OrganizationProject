@@ -27,6 +27,10 @@ public class Organization {
         this.officeNumber = officeNumber;
     }
 
+    public Organization(){
+
+    }
+
     public String getName() {
         return name;
     }
