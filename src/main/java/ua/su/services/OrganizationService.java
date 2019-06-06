@@ -10,4 +10,5 @@ public interface OrganizationService {
     Organization getOne(Long id);
     void deleteOrganization(Long id);
     Organization createOrganization(Organization organization);
+    
 }

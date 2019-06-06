@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import ua.su.domain.Organization;
 import ua.su.repositories.OrganizationRepository;
 
+import javax.validation.constraints.NotNull;
 import java.sql.PreparedStatement;
 import java.util.List;
 
@@ -67,5 +68,17 @@ public class OrganizationRepositoryImpl implements OrganizationRepository {
         jdbcTemplate.update("UPDATE organizations SET name = ?, adress = ?, active = ? WHERE id = ?",
                 organization.getName(), organization.getAdress(), organization.getActive(), id);
         return getOne(id);
+    }
+
+    public List<Organization> FindListCountries(Integer employeeNum){
+        return jdbcTemplate.query("SELECT DISTINCT t1.country\n" +
+                "FROM organizations t1,\n" +
+                "( SELECT employees.organizations_id,\n" +
+                "count(employees.id) AS emploee_num\n" +
+                "FROM employees\n" +
+                "GROUP BY employees.organizations_id) t2\n" +
+                "WHERE t1.id = t2.organizations_id AND t2.emploee_num > ? AND t1.region::text = 'EUROPE'::text\n" +
+                "ORDER BY t1.country;",
+                ROW_MAPPER, employeeNum);
     }
 }
